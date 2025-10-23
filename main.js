@@ -38,9 +38,29 @@ function createMarkUp(response) {
 }
 
 
+function replaceEmails() {
+    for (let i = 0; i < 10; i++) {
+
+        const endpoint = 'https://flynn.boolean.careers/exercises/api/random/mail'
+
+        fetch(endpoint)
+            .then(response => response.json())
+            .then(data => {
+                const { response } = data
+
+                listEl.innerHTML += createMarkUp(response)
+
+            })
+            .catch(error => {
+                error
+            })
+
+    }
+}
 
 
-const listEl = document.getElementById('emailList')
+
+let listEl = document.getElementById('emailList')
 console.log(listEl);
 
 const btnEl = document.getElementById('regen')
@@ -69,3 +89,7 @@ for (let i = 0; i < 10; i++) {
 
 
 
+btnEl.addEventListener('click', () => {
+    listEl.innerHTML = ''
+    replaceEmails()
+})
