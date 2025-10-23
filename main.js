@@ -29,10 +29,10 @@ Inserire un bottone che al click faccia il fetch altre 10 mail (sostituendo le a
 */
 
 
-function createMarkUp () {
+function createMarkUp(response) {
     return `
     <li>
-        <a href="#">email</a>
+        <a href="#">${response}</a>
     </li>
     `
 }
@@ -40,23 +40,29 @@ function createMarkUp () {
 
 
 
-const emailList = document.getElementById('emailList')
-console.log(emailList);
+const listEl = document.getElementById('emailList')
+console.log(listEl);
 
 
-const endpoint = 'https://flynn.boolean.careers/exercises/api/random/mail'
 
-fetch(endpoint)
-.then(response => response.json())
-.then(data => {
 
-    console.log(data);
+
     
-    const {response} = data
-    console.log(response);
+    const endpoint = 'https://flynn.boolean.careers/exercises/api/random/mail'
     
+    fetch(endpoint)
+        .then(response => response.json())
+        .then(data => {
+           const {response} = data
+
+           listEl.innerHTML += createMarkUp(response)
+           
+        })
+        .catch(error => {
+            error
+        })
     
-})
-.catch(error => {
-    error
-})
+
+
+
+
