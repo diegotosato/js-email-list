@@ -29,5 +29,20 @@ Inserire un bottone che al click faccia il fetch altre 10 mail (sostituendo le a
 */
 
 
+function createMarkUp () {
+    return `
+    <li>
+        <a href="#">email</a>
+    </li>
+    `
+}
+
+
+
+
+
+
+
+
 const emailList = document.getElementById('emailList')
 console.log(emailList);
