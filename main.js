@@ -27,3 +27,7 @@ Inserire un bottone che al click faccia il fetch altre 10 mail (sostituendo le a
     - loop 10 times
     - variable isolate by id += API mail creation
 */
+
+
+const emailList = document.getElementById('emailList')
+console.log(emailList);
