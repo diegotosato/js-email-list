@@ -46,22 +46,24 @@ console.log(listEl);
 
 
 
+for (let i = 0; i < 10; i++) {
 
-    
     const endpoint = 'https://flynn.boolean.careers/exercises/api/random/mail'
-    
+
     fetch(endpoint)
         .then(response => response.json())
         .then(data => {
-           const {response} = data
+            const { response } = data
 
-           listEl.innerHTML += createMarkUp(response)
-           
+            listEl.innerHTML += createMarkUp(response)
+
         })
         .catch(error => {
             error
         })
-    
+        
+}
+
 
 
 
