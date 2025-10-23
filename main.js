@@ -40,9 +40,8 @@ function createMarkUp () {
 
 
 
-
-
-
-
 const emailList = document.getElementById('emailList')
 console.log(emailList);
+
+
+const endpoint = 'https://flynn.boolean.careers/exercises/api/random/mail'
