@@ -43,7 +43,8 @@ function createMarkUp(response) {
 const listEl = document.getElementById('emailList')
 console.log(listEl);
 
-
+const btnEl = document.getElementById('regen')
+console.log(btnEl);
 
 
 for (let i = 0; i < 10; i++) {
@@ -61,7 +62,7 @@ for (let i = 0; i < 10; i++) {
         .catch(error => {
             error
         })
-        
+
 }
 
 
