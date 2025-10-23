@@ -31,8 +31,8 @@ Inserire un bottone che al click faccia il fetch altre 10 mail (sostituendo le a
 
 function createMarkUp(response) {
     return `
-    <li>
-        <a href="#">${response}</a>
+    <li class="list-group-item my-1">
+        <a href="#" class="link-primary link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover">${response}</a>
     </li>
     `
 }
